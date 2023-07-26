@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Galaxy Incremental</title>
+</head>
+
+<body style="background-color: #333; color: whitesmoke">
+    <table id="resources">
+        <tr>
+            <td>Unassigned Mining Droids</td>
+            <td colspan="2"><span id="unassignedMiningDroidsCount">1</span>/<span
+                    id="unassignedMiningDroidsTotal">1</span></td>
+        </tr>
+        <tr>
+            <td colspan="3">Energy</td>
+        </tr>
+        <tr>
+            <td>Electricity</td>
+            <td><span id="electricityCount">100</span>/<span id="electricityMaximum">100</span></td>
+            <td><span id="electricityPerSecond">1</span>/s</td>
+            <td>Solar Panels: <span id="solarPanelCount">0</span></td>
+        </tr>
+        <tr>
+            <td>Ice</td>
+            <td><span id="iceCount">0</span>/<span id="iceMaximum">10</span></td>
+            <td><span id="icePerSecond">0</span>/s</td>
+            <td>Droids: <span id="iceDroidCount">0</span></td>
+            <td><button onclick="addDroid('Ice')">+</button></td>
+            <td><button onclick="removeDroid('Ice')">-</button></td>
+        </tr>
+        <tr>
+            <td>Rocket Fuel</td>
+            <td><span id="rocketFuelCount">10</span>/<span id="rocketFuelMaximum">10</span></td>
+            <td><span id="rocketFuelPerSecond">0</span>/s</td>
+            <td>Refineries: Active = <span id="rocketFuelRefineryActive">false</span></td>
+            <td colspan="2"><button onclick="toggleRocketFuelRefinery()">Toggle</button></td>
+        </tr>
+        <tr>
+            <td colspan="3">Raw Elements</td>
+        </tr>
+        <tr>
+            <td>Iron</td>
+            <td><span id="ironCount">0</span>/<span id="ironMaximum">10</span></td>
+            <td><span id="ironPerSecond">0</span>/s</td>
+            <td>Droids: <span id="ironDroidCount">0</span></td>
+            <td><button onclick="addDroid('Iron')">+</button></td>
+            <td><button onclick="removeDroid('Iron')">-</button></td>
+        </tr>
+        <tr>
+            <td>Silicon</td>
+            <td><span id="siliconCount">0</span>/<span id="siliconMaximum">10</span></td>
+            <td><span id="siliconPerSecond">0</span>/s</td>
+            <td>Droids: <span id="siliconDroidCount">0</span></td>
+            <td><button onclick="addDroid('Silicon')">+</button></td>
+            <td><button onclick="removeDroid('Silicon')">-</button></td>
+        </tr>
+    </table>
+    <hr>
+    <button onclick="createMiningDroid()">Create Mining Droid: 10 Iron, 5 Silicon, 1 Electricity</button>
+    <button onclick="createSolarPanel()">Create Solar Panel: 5 Iron, 10 Silicon, 1 Electricity</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
